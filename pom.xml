@@ -6,10 +6,9 @@
     <groupId>com.ldlood</groupId>
     <artifactId>sell</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
 
-    <name>sell</name>
-    <description>SpringBoot_Wechat_Sell project for Spring Boot</description>
+    <name>E-Buy</name>
+    <description>easy buy</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -28,7 +27,22 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+             <!-- 外部tomcat部署-1.移除嵌入式tomcat插件 -->
+		    <!-- <exclusions>
+		        <exclusion>
+		            <groupId>org.springframework.boot</groupId>
+		            <artifactId>spring-boot-starter-tomcat</artifactId>
+		        </exclusion>
+		    </exclusions> -->
         </dependency>
+        
+		<!-- 外部tomcat部署-2.新增servlet-api的依赖 -->
+        <!-- <dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-servlet-api</artifactId>
+		    <version>8.5.20</version>
+		    <scope>provided</scope>
+		</dependency> -->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -98,6 +112,11 @@
 
 
 
+        <dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-configuration-processor</artifactId>
+        	<optional>true</optional>
+        </dependency>
     </dependencies>
 
     <build>
@@ -106,6 +125,14 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            
+            <plugin>  
+		        <groupId>org.apache.maven.plugins</groupId>  
+		        <artifactId>maven-surefire-plugin</artifactId>  
+			        <configuration>  
+			          <skip>true</skip>  
+			        </configuration>  
+     		 </plugin>  
         </plugins>
     </build>
 

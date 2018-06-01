@@ -27,7 +27,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class PayServiceImpl implements PayService {
 
-    private static final String ORDER_NAME = "微信点餐(ldlood店)";
+    private static final String ORDER_NAME = "微信点餐";
 
     @Autowired
     private BestPayServiceImpl bestPayService;

@@ -7,6 +7,8 @@ package com.ldlood.constant;
 public interface RedisConstant {
 
     String TOKEN_PREFIX = "token_%s";
+    
+    String WECHAT_USER = "wechat_user";
 
     Integer EXPIRE = 7200; //过期时间 2小时
 }

@@ -36,7 +36,7 @@ public class BuyerProductController {
 
 
     @GetMapping("/list")
-    @Cacheable(cacheNames = "product", key = "#sellerid", condition = "#sellerid.length()>10", unless = "#result.getCode() !=0")
+    //@Cacheable(cacheNames = "product", key = "#sellerid", condition = "#sellerid.length()>10", unless = "#result.getCode() !=0")
     public ResultVO list(@RequestParam(value = "sellerid", required = false) String sellerid) {
 
         //查询上架的商品

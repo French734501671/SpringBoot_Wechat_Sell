@@ -2,45 +2,36 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: 123456
-    url: jdbc:mysql://localhost/sell?characterEncoding=utf-8&useSSL=false
+    password: yetingfm@2018
+    url: jdbc:mysql://193.112.14.58:3306/sell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
   jackson:
     default-property-inclusion: non_null
   redis:
-    host: 172.20.10.10
+    host: 127.0.0.1
     port: 6379
-    #password:
+    #password: 
 server:
-  context-path: /
-#  context-path: /sell
-#logging:
-#  pattern:
-#    console: "%d - %msg%n"
-##  path: /var/log/tomcat/
-#  file: /var/log/tomcat/sell.log
-#  level:
-#    com.imooc.LoggerTest: debug
+  #请求加项目名
+  context-path: /sell
 wechat:
   # 微信授权 id
-#  mpAppId: wx0465fe3767346d03
-#  mpAppSecret: 98f3f91786611085871483c1b799aaf5
-  mpAppId: wxd898fcb01713c658
-  mpAppSecret: 29d8a650db31472aa87800e3b0d739f2
+  mpAppId: wx2c872dd262b57ccc
+  mpAppSecret: cf78f255b2e89299a7266c7d7db0c2e6
   openAppId: xxxxxxxxxxxxxxxxxx
   openAppSecret: xxxxxxxxxxxxxxxxxxxxx
   mchId: 1483469312
   mchKey: C5245D70627C1F8E9964D494B0735025
   keyPath:  C:/Users/Hasee/Desktop/SpringBoot_Wechat_Sell/src/main/resources/h5.p12
-  notifyUrl: http://xiazhong.natapp1.cc/notify
+  notifyUrl: http://i5design.viphk.ngrok.org/notify
   templateId:
     orderStatus: kahmCfZjV-2jORZ4yFti9-69smaV3gQ1lFFCDKL_vjI
     payStatus: kahmCfZjV-2jORZ4yFti9-69smaV3gQ1lFFCDKL_vjI
 
 projectUrl:
-  wechatMpAuthorize: http://xiazhong.natapp1.cc
-  wechatOpenAuthorize: http://xiazhong.natapp1.cc
+  wechatMpAuthorize: http://i5design.viphk.ngrok.org
+  wechatOpenAuthorize: http://i5design.viphk.ngrok.org
   sell: http://localhost:8080
 logging:
   level:

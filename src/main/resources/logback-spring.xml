@@ -24,7 +24,7 @@
         <!--滚动策略-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--路径-->
-            <fileNamePattern>C:/Users/Hasee/Desktop/SpringBoot_Wechat_Sell/log/info.%d.log</fileNamePattern>
+            <fileNamePattern>/usr/local/project/logs/sell/info.%d.log</fileNamePattern>
         </rollingPolicy>
     </appender>
 
@@ -41,14 +41,14 @@
         <!--滚动策略-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--路径-->
-            <fileNamePattern>C:/Users/Hasee/Desktop/SpringBoot_Wechat_Sell/log/error.%d.log</fileNamePattern>
+            <fileNamePattern>/usr/local/project/logs/sell/error.%d.log</fileNamePattern>
         </rollingPolicy>
     </appender>
 
     <root level="info">
         <appender-ref ref="consoleLog" />
         <appender-ref ref="fileInfoLog" />
-        <appender-ref ref="fileErrorLog" />
+        <!-- <appender-ref ref="fileErrorLog" /> -->
     </root>
 
 </configuration>
